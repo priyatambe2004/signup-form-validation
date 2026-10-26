@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sprout – Create your account</title>
+<meta name="description" content="Join Sprout and learn to code in ten minutes a day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="#top"><span class="leaf">🌱</span>Sprout</a>
+    <nav aria-label="Main"><a href="#features">Features</a><a href="#how">How it works</a><a href="#faq">FAQ</a></nav>
+    <button class="theme" id="theme" aria-label="Switch to dark mode">☾</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero">
+    <div class="hero-text">
+      <p class="eyebrow">Learn to code, one small step a day</p>
+      <h1>Grow a new skill in <em>ten minutes</em> a day.</h1>
+      <p class="lede">Short lessons, instant feedback and projects you can show off. Create a free account to start your first streak.</p>
+      <ul class="points">
+        <li>Bite-sized lessons for HTML, CSS and JavaScript</li>
+        <li>Practice projects with step-by-step hints</li>
+        <li>Progress and streak tracking</li>
+      </ul>
+    </div>
+
+    <div class="card" id="signup">
+      <div id="formWrap">
+        <h2>Create your account</h2>
+        <p class="sub">It takes less than a minute.</p>
+        <div class="progress"><div class="bar" id="progBar"></div></div>
+        <p class="progtext" id="progText">0 of 5 steps complete</p>
+
+        <form id="form" novalidate>
+          <p class="summary" id="summary" role="alert" tabindex="-1"></p>
+
+          <div class="field" data-field="name">
+            <label for="name">Full name</label>
+            <div class="control"><input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-err" placeholder="Priya Sharma"><span class="tick" aria-hidden="true">✓</span></div>
+            <p class="err" id="name-err"></p>
+          </div>
+
+          <div class="field" data-field="email">
+            <label for="email">Email address</label>
+            <div class="control"><input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-err" placeholder="you@example.com"><span class="tick" aria-hidden="true">✓</span></div>
+            <p class="err" id="email-err"></p>
+          </div>
+
+          <div class="field" data-field="password">
+            <label for="password">Password</label>
+            <div class="control"><input id="password" name="password" type="password" autocomplete="new-password" aria-describedby="password-err rules"><button type="button" class="eye" data-for="password" aria-label="Show password" aria-pressed="false">Show</button></div>
+            <p class="err" id="password-err"></p>
+            <div class="meter" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <p class="strength" id="strength" aria-live="polite">Strength: enter a password</p>
+            <ul class="rules" id="rules">
+              <li data-rule="len">At least 8 characters</li>
+              <li data-rule="lower">A lowercase letter</li>
+              <li data-rule="upper">An uppercase letter</li>
+              <li data-rule="digit">A number</li>
+              <li data-rule="symbol" class="opt">A symbol such as ! or @ (recommended)</li>
+            </ul>
+          </div>
+
+          <div class="field" data-field="confirm">
+            <label for="confirm">Confirm password</label>
+            <div class="control"><input id="confirm" name="confirm" type="password" autocomplete="new-password" aria-describedby="confirm-err"><button type="button" class="eye" data-for="confirm" aria-label="Show password" aria-pressed="false">Show</button></div>
+            <p class="err" id="confirm-err"></p>
+          </div>
+
+          <div class="field" data-field="terms">
+            <label class="check"><input type="checkbox" id="terms" aria-describedby="terms-err"> I agree to the Terms and Privacy Policy</label>
+            <p class="err" id="terms-err"></p>
+          </div>
+
+          <button class="btn" id="submit" type="submit">Create account</button>
+        </form>
+      </div>
+
+      <div class="success" id="success" hidden tabindex="-1">
+        <div class="check-big" aria-hidden="true">✓</div>
+        <h2 id="welcome">Welcome!</h2>
+        <p>Your account is ready. This is a demo, so nothing was sent or saved.</p>
+        <button class="btn ghost" id="another" type="button">Create another account</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="features">
+    <h2 class="sec">Everything you need to keep going</h2>
+    <div class="cards">
+      <article><span>⚡</span><h3>Quick lessons</h3><p>Each lesson takes about ten minutes, so it fits into any day.</p></article>
+      <article><span>🛠️</span><h3>Real projects</h3><p>Build things like calculators, games and landing pages as you learn.</p></article>
+      <article><span>🔥</span><h3>Streaks</h3><p>Track your daily progress and see how far you have come.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap" id="how">
+    <h2 class="sec">How it works</h2>
+    <ol class="steps">
+      <li><b>1</b><div><h3>Sign up</h3><p>Create a free account with your email.</p></div></li>
+      <li><b>2</b><div><h3>Pick a path</h3><p>Choose HTML, CSS or JavaScript to begin.</p></div></li>
+      <li><b>3</b><div><h3>Build daily</h3><p>Learn a little each day and ship a project every week.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="wrap faq" id="faq">
+    <h2 class="sec">Questions</h2>
+    <details><summary>Is this form sending my data anywhere?</summary><p>No. It is a practice project, so the form is checked in your browser and nothing is stored or sent.</p></details>
+    <details><summary>What makes a strong password?</summary><p>Length matters most. Use at least 12 characters and mix letters, numbers and symbols. A short phrase of unrelated words also works well.</p></details>
+    <details><summary>Why does the form show errors next to each field?</summary><p>It lets you see exactly what to fix without losing your place, and screen readers announce each message.</p></details>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Sprout · Built for Task 26 · HTML, CSS and JavaScript</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
